@@ -31,7 +31,8 @@
                 android:layout_marginTop="10dp"
                 android:imeOptions="actionDone"
                 android:inputType="number"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:maxLength="3"/>
         </LinearLayout>
 
         <LinearLayout
@@ -54,7 +55,8 @@
                 android:layout_marginTop="10dp"
                 android:imeOptions="actionDone"
                 android:inputType="number"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:maxLength="3"/>
         </LinearLayout>
 
         <android.widget.Button
