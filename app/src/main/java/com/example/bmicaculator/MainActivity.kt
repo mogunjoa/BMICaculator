@@ -1,7 +1,9 @@
 package com.example.bmicaculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.bmicaculator.databinding.ActivityMainBinding
@@ -32,14 +34,16 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    fun valueSet() {
-
-    }
+    fun getValue(editText: EditText) : String = editText.text.toString()
 
     fun initEvent() {
         binding.btnCaculate.setOnClickListener {
             if(validateCheck()) {
-
+                Intent(this, BmiResultActivity::class.java).run {
+                    putExtra("heigth", getValue(binding.etHeight))
+                    putExtra("weight", getValue(binding.etWeight))
+                    startActivity(intent)
+                }
             }
         }
     }

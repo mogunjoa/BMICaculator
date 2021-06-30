@@ -8,5 +8,30 @@
     android:layout_height="match_parent"
     tools:context=".BmiResultActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI 수치"
+            android:textSize="30dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvBmiResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            tools:text="32.32"/>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
