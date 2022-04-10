@@ -1,11 +1,10 @@
 package com.example.bmicaculator
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.bmicaculator.databinding.ActivityMainBinding
 
@@ -20,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         initEvent()
     }
 
-    fun validateCheck(): Boolean {
+    private fun validateCheck(): Boolean {
 
         if (binding.etHeight.text.isEmpty()) {
             Toast.makeText(this, "신장을 입력해주세요.", Toast.LENGTH_SHORT).show()
@@ -37,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     fun getValue(editText: EditText) : Int = editText.text.toString().toInt()
 
-    fun initEvent() {
+    private fun initEvent() {
         binding.btnCaculate.setOnClickListener {
             if(validateCheck()) {
                 startActivity(
